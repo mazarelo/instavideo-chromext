@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "InstaVideoDownloader",
+  "description": "Download instagram videos instantly",
+  "version": "1",
+  "author": "Joao Mazarelo",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*.instagram.com/*"],
+    "js": ["content.js"]
+  }],
+  "browser_action": {
+    "default_icon": "tab-icon.png",
+    "default_title": "Insta video downloader"
+  },
+    "permissions": [
+      "activeTab", 
+      "declarativeContent",
+      "downloads"
+    ]
+ }
